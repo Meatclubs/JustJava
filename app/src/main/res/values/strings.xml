@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">JustJava</string>
+    <string name="milkOption">Milk</string>
+    <string name="creamOption">Whipped Cream</string>
+    <string name="sugarOption">Sugar</string>
+    <string name="quantityHeader">Quantity:</string>
+    <string name="optionsHeader">Extras:</string>
+    <string name="orderButtonText">Order</string>
+    <string name="minusButtonText">-</string>
+    <string name="plusButtonText">+</string>
+    <string name="quantityTextViewDefault">0</string>
+    <string name="totalCostButton">Total:</string>
+    <string name="totalCostDefaultValue">$0.00</string>
+
+</resources>

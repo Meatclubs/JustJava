@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="milkCost" type="dimen" format="float">0.10</item>
+    <item name="sugarCost" type="dimen" format="float">0.10</item>
+    <item name="creamCost" type="dimen" format="float">0.20</item>
+    <item name="coffeeCost" type="dimen" format="float">1.20</item>
+
+</resources>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    tools:context=".MainActivity">
+
+    <!--Quantity Header -->
+    <TextView
+        android:id="@+id/quantityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantityHeader"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <!--Quantity Modifier -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/minusButtonText"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:onClick="decreaseQuantity"/>
+
+        <EditText
+            android:id="@+id/quantityValueTextView"
+            android:text="@string/quantityTextViewDefault"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/plusButtonText"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:onClick="increaseQuantity"/>
+    </LinearLayout>
+
+    <!--Options Header -->
+    <TextView
+    android:id="@+id/optionsTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/optionsHeader"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp" />
+
+    <!--Option #1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/milkCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="milkOptionChange"/>
+
+        <TextView
+            android:id="@+id/milkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/milkOption"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/milkCostTextView"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!--Option #2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/sugarCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sugarOptionChange"/>
+
+        <TextView
+            android:id="@+id/sugarTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sugarOption"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/sugarCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!--Option #3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/creamCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="creamOptionChange"/>
+
+        <TextView
+            android:id="@+id/creamTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/creamOption"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/creamCostTextView"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--Total cost section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/TotalCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/totalCostButton"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/totalCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/totalCostDefaultValue"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--Submit Button -->
+    <Button
+        android:id="@+id/orderButton"
+        android:text="@string/orderButtonText"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="submitOrder"/>
+
+</LinearLayout>
